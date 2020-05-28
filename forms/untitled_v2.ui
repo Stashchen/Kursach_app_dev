@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1178</width>
+    <height>790</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Курсовая работа</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="CustomGL" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>721</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cylinder_btn">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>180</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cylinder</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dome_btn">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>180</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dome</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>190</y>
+      <width>201</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add new figure:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error_msg">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>230</y>
+      <width>381</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>40</y>
+      <width>381</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All the figures:</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>340</y>
+      <width>371</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Figure Properties</string>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>351</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="1" column="0">
+       <widget class="QLabel" name="x_label">
+        <property name="text">
+         <string>X</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="x_edit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="y_label">
+        <property name="text">
+         <string>Y</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="y_edit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="z_label">
+        <property name="text">
+         <string>Z</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="z_edit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="name_edit"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="flip_cb">
+        <property name="text">
+         <string>Flip</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>351</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="sectors_label">
+        <property name="text">
+         <string>Sectors:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="sectors_edit">
+        <property name="text">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>351</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="color_label">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Color</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="colors_combo">
+        <item>
+         <property name="text">
+          <string>Blue-Purple</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/1.png</normaloff>../images/icons/1.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pink-Yellow</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/2.png</normaloff>../images/icons/2.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Red</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/3.png</normaloff>../images/icons/3.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Green</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/5.png</normaloff>../images/icons/5.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blue</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/4.png</normaloff>../images/icons/4.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Yellow</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../images/icons/6.png</normaloff>../images/icons/6.png</iconset>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>351</width>
+       <height>83</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="solid_rb">
+        <property name="text">
+         <string>solid</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="lined_rb">
+        <property name="text">
+         <string>lined</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="dotted_rb">
+        <property name="text">
+         <string>dotted</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="confirm_btn">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>340</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Confirm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="delete_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="change_btn">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>340</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Change</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="sphere_btn">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>180</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sphere</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1178</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuword">
+    <property name="title">
+     <string>Save</string>
+    </property>
+    <addaction name="actionWord"/>
+    <addaction name="actionExcel"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuword"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionWord">
+   <property name="text">
+    <string>Word</string>
+   </property>
+  </action>
+  <action name="actionExcel">
+   <property name="text">
+    <string>Excel</string>
+   </property>
+  </action>
+  <action name="actionHel">
+   <property name="text">
+    <string>Hel[</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header>custom_gl.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

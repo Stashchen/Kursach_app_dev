@@ -22,9 +22,9 @@ def save_exel():
     img = openpyxl.drawing.image.Image('images/photo.png')
     img.anchor = 'A2'
     ws.add_image(img)
-    ws['A25'].alignment = Alignment(horizontal='center', vertical='center')
-    ws['A25'] = 'Created by Pavel Stashchenko, group 10701118'
-    ws.merge_cells('A25:I25')
+    ws['A37'].alignment = Alignment(horizontal='center', vertical='center')
+    ws['A37'] = 'Created by Pavel Stashchenko, group 10701118'
+    ws.merge_cells('A37:I37')
     wb.save('files/excel_result.xlsx')
 
 
